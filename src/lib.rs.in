@@ -1,0 +1,5 @@
+#[cfg_attr(feature = "serde_feature", derive(Debug, Deserialize))]
+struct Foo {
+    #[cfg_attr(feature = "serde_feature", serde(skip_deserializing))]
+    vec: Vec<u8>,
+}

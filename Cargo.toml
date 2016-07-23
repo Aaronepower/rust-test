@@ -1,0 +1,18 @@
+[package]
+name = "rust-test"
+version = "0.1.0"
+authors = ["Aaronepower <theaaronepower@gmail.com>"]
+build = "src/build.rs"
+
+[features]
+default = []
+serde_feature = ["serde_codegen", "serde", "serde_json", "serde_xml"]
+
+# For building serde in stable.
+[build-dependencies]
+serde_codegen = {version = "0.7.11", optional = true }
+
+[dependencies]
+serde = { version = "0.7.11", optional = true }
+serde_json = { version = "0.7.3", optional = true }
+serde_xml = { version = "0.7.1", optional = true }
