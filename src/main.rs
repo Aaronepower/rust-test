@@ -1,3 +1,1 @@
-fn main() {
-    let _ = &*"sth";
-}
+fn main() {}
